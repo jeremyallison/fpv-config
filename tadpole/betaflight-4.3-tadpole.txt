@@ -71,12 +71,13 @@ set osd_rssi_pos = 2112
 set osd_link_quality_pos = 2144
 set osd_tim_1_pos = 2464
 set osd_tim_2_pos = 2432
-set osd_flymode_pos = 2477
-set osd_mah_drawn_pos = 2187
+set osd_flymode_pos = 2478
+set osd_mah_drawn_pos = 2189
 set osd_altitude_pos = 18521
-set osd_avg_cell_voltage_pos = 2155
-set osd_disarmed_pos = 2346
-set osd_flip_arrow_pos = 2254
+set osd_warnings_pos = 14666
+set osd_avg_cell_voltage_pos = 2157
+set osd_disarmed_pos = 2347
+set osd_flip_arrow_pos = 2255
 set osd_displayport_device = MSP
 set debug_mode = GYRO_SCALED
 set displayport_msp_serial = 2
@@ -118,22 +119,11 @@ set dterm_lpf1_dyn_max_hz = 195
 set dterm_lpf1_static_hz = 97
 set dterm_lpf2_static_hz = 195
 set anti_gravity_gain = 0
-set i_pitch = 0
-set d_pitch = 34
-set f_pitch = 0
-set i_roll = 0
-set d_roll = 30
-set f_roll = 0
-set i_yaw = 0
-set f_yaw = 0
 set angle_level_strength = 100
 set d_max_advance = 0
 set auto_profile_cell_count = 4
 set feedforward_jitter_factor = 12
 set dyn_idle_min_rpm = 60
-set simplified_i_gain = 0
-set simplified_dmax_gain = 0
-set simplified_feedforward_gain = 0
 set simplified_dterm_filter_multiplier = 130
 
 profile 2
@@ -165,6 +155,7 @@ profile 1
 rateprofile 0
 
 # rateprofile 0
+set thr_expo = 20
 set roll_srate = 20
 set pitch_srate = 20
 set yaw_srate = 20
@@ -228,7 +219,7 @@ set pitch_srate = 56
 set yaw_srate = 40
 
 # restore original rateprofile selection
-rateprofile 1
+rateprofile 0
 
 # save configuration
 save
