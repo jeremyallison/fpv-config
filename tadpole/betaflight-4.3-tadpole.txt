@@ -119,11 +119,27 @@ set dterm_lpf1_dyn_max_hz = 195
 set dterm_lpf1_static_hz = 97
 set dterm_lpf2_static_hz = 195
 set anti_gravity_gain = 0
+set p_pitch = 56
+set i_pitch = 100
+set d_pitch = 48
+set f_pitch = 149
+set p_roll = 53
+set i_roll = 95
+set d_roll = 43
+set f_roll = 143
+set p_yaw = 53
+set i_yaw = 95
+set f_yaw = 143
 set angle_level_strength = 100
+set d_min_roll = 43
+set d_min_pitch = 48
 set d_max_advance = 0
 set auto_profile_cell_count = 4
 set feedforward_jitter_factor = 12
 set dyn_idle_min_rpm = 60
+set simplified_master_multiplier = 120
+set simplified_d_gain = 120
+set simplified_dmax_gain = 0
 set simplified_dterm_filter_multiplier = 130
 
 profile 2
