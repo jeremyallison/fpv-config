@@ -1,0 +1,254 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F405 (S405) 4.3.1 Jul 13 2022 / 03:32:11 (8d4f005) MSP API: 1.44
+# config: manufacturer_id: DIAT, board_name: MAMBAF405_2022B, version: 38215f0d, date: 2022-07-13T21:57:19Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MAMBAF405_2022B
+manufacturer_id DIAT
+mcu_id 0051004f5532501620393331
+signature 
+
+# name: Lil Llama
+
+# feature
+feature -RX_PARALLEL_PWM
+feature -LED_STRIP
+
+# serial
+serial 2 1 115200 57600 0 115200
+serial 3 0 115200 57600 0 115200
+
+# beacon
+beacon RX_SET
+
+# aux
+aux 0 0 1 1775 2100 0 0
+aux 1 1 2 900 1275 0 0
+aux 2 2 2 1300 1750 0 0
+aux 3 13 5 1775 2100 0 0
+aux 4 35 3 1775 2100 0 0
+aux 5 36 6 1775 2100 0 0
+
+# adjrange
+adjrange 0 0 0 900 2100 12 0 0 0
+
+# master
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_type = PT2
+set dyn_notch_count = 2
+set dyn_notch_q = 500
+set dyn_notch_min_hz = 100
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 0
+set acc_calibration = 13,-11,11,1
+set mag_hardware = NONE
+set rc_smoothing_auto_factor = 60
+set serialrx_provider = CRSF
+set blackbox_sample_rate = 1/2
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set motor_output_reordering = 3,2,1,0,4,5,6,7
+set bat_capacity = 450
+set vbat_scale = 111
+set ibata_scale = 80
+set beeper_dshot_beacon_tone = 5
+set small_angle = 180
+set pid_process_denom = 2
+set simplified_gyro_filter = OFF
+set osd_vbat_pos = 75
+set osd_rssi_pos = 2112
+set osd_link_quality_pos = 2144
+set osd_tim_1_pos = 2464
+set osd_tim_2_pos = 2432
+set osd_flymode_pos = 2478
+set osd_mah_drawn_pos = 2189
+set osd_altitude_pos = 18521
+set osd_warnings_pos = 14666
+set osd_avg_cell_voltage_pos = 2157
+set osd_disarmed_pos = 2347
+set osd_flip_arrow_pos = 2255
+set osd_displayport_device = MSP
+set debug_mode = GYRO_SCALED
+set displayport_msp_serial = 2
+set gyro_1_sensor_align = CW90
+set gyro_1_align_yaw = 900
+set rpm_filter_min_hz = 80
+set rpm_filter_fade_range_hz = 30
+set name = Lil Llama
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 150
+set dterm_lpf1_dyn_max_hz = 300
+set dterm_lpf1_static_hz = 150
+set dterm_lpf2_static_hz = 300
+set anti_gravity_gain = 0
+set p_pitch = 51
+set i_pitch = 92
+set d_pitch = 37
+set f_pitch = 110
+set p_roll = 49
+set i_roll = 88
+set d_roll = 33
+set f_roll = 105
+set p_yaw = 49
+set i_yaw = 88
+set f_yaw = 105
+set angle_level_strength = 100
+set d_min_roll = 33
+set d_min_pitch = 37
+set d_max_advance = 0
+set auto_profile_cell_count = 4
+set feedforward_averaging = 2_POINT
+set feedforward_jitter_factor = 10
+set feedforward_boost = 5
+set dyn_idle_min_rpm = 60
+set simplified_master_multiplier = 110
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 80
+set simplified_dterm_filter_multiplier = 200
+
+profile 1
+
+# profile 1
+set dterm_lpf1_dyn_min_hz = 120
+set dterm_lpf1_dyn_max_hz = 240
+set dterm_lpf1_static_hz = 120
+set dterm_lpf2_static_hz = 240
+set anti_gravity_gain = 0
+set p_pitch = 37
+set i_pitch = 80
+set d_pitch = 27
+set f_pitch = 99
+set p_roll = 35
+set i_roll = 76
+set d_roll = 23
+set f_roll = 95
+set p_yaw = 35
+set i_yaw = 76
+set f_yaw = 95
+set angle_level_strength = 100
+set d_min_roll = 23
+set d_min_pitch = 27
+set d_max_advance = 0
+set auto_profile_cell_count = 3
+set feedforward_averaging = 2_POINT
+set feedforward_jitter_factor = 10
+set dyn_idle_min_rpm = 40
+set simplified_master_multiplier = 80
+set simplified_i_gain = 120
+set simplified_dmax_gain = 0
+set simplified_dterm_filter_multiplier = 160
+
+profile 2
+
+# profile 2
+set dterm_lpf1_dyn_min_hz = 97
+set dterm_lpf1_dyn_max_hz = 195
+set dterm_lpf1_static_hz = 97
+set dterm_lpf2_static_hz = 195
+set anti_gravity_gain = 0
+set i_pitch = 100
+set d_pitch = 73
+set i_roll = 95
+set d_roll = 63
+set i_yaw = 95
+set angle_level_strength = 100
+set d_min_roll = 47
+set d_min_pitch = 54
+set d_max_advance = 0
+set feedforward_jitter_factor = 12
+set dyn_idle_min_rpm = 60
+set simplified_i_gain = 120
+set simplified_d_gain = 160
+set simplified_dterm_filter_multiplier = 130
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set thr_expo = 20
+set roll_srate = 20
+set pitch_srate = 20
+set yaw_srate = 20
+
+rateprofile 1
+
+# rateprofile 1
+set thr_mid = 0
+set thr_expo = 20
+set roll_rc_rate = 10
+set pitch_rc_rate = 10
+set yaw_rc_rate = 10
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 40
+set roll_srate = 90
+set pitch_srate = 90
+set yaw_srate = 80
+
+rateprofile 2
+
+# rateprofile 2
+set thr_mid = 0
+set thr_expo = 20
+set roll_rc_rate = 11
+set pitch_rc_rate = 11
+set yaw_rc_rate = 11
+set roll_expo = 38
+set pitch_expo = 38
+set yaw_expo = 38
+set roll_srate = 74
+set pitch_srate = 74
+set yaw_srate = 60
+
+rateprofile 3
+
+# rateprofile 3
+set thr_expo = 20
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 223
+set pitch_rc_rate = 223
+set yaw_rc_rate = 210
+set roll_expo = 55
+set pitch_expo = 55
+set yaw_expo = 60
+set roll_srate = 8
+set pitch_srate = 8
+set yaw_srate = 26
+
+rateprofile 4
+
+# rateprofile 4
+set thr_expo = 20
+
+rateprofile 5
+
+# rateprofile 5
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 195
+set pitch_rc_rate = 195
+set yaw_rc_rate = 180
+set roll_srate = 56
+set pitch_srate = 56
+set yaw_srate = 40
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
