@@ -1,0 +1,196 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F405 (S405) 4.3.2 Nov 28 2022 / 07:26:30 (60c9521) MSP API: 1.44
+# config: manufacturer_id: FLWO, board_name: FLYWOOF405S_AIO, version: bff306ae, date: 2022-11-15T12:36:53Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name FLYWOOF405S_AIO
+manufacturer_id FLWO
+mcu_id 003a001f3232471432343531
+signature 
+
+# name: Tiny Llama
+
+# feature
+feature -RX_PARALLEL_PWM
+feature -RSSI_ADC
+feature -LED_STRIP
+feature TELEMETRY
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 3 1 115200 57600 0 115200
+
+# beacon
+beacon RX_SET
+
+# aux
+aux 0 0 1 1775 2100 0 0
+aux 1 1 2 900 1275 0 0
+aux 2 2 2 1300 1750 0 0
+aux 3 13 5 1775 2100 0 0
+aux 4 35 3 1775 2100 0 0
+
+# adjrange
+adjrange 0 0 0 900 2100 12 0 0 0
+
+# master
+set gyro_lpf1_static_hz = 0
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 0
+set acc_calibration = 8,27,-21,1
+set mag_align_pitch = 1800
+set mag_align_yaw = 900
+set mag_hardware = NONE
+set rc_smoothing_auto_factor = 60
+set serialrx_provider = CRSF
+set blackbox_sample_rate = 1/2
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set motor_output_reordering = 3,1,2,0,4,5,6,7
+set bat_capacity = 550
+set beeper_dshot_beacon_tone = 5
+set small_angle = 180
+set pid_process_denom = 2
+set simplified_gyro_filter = OFF
+set osd_vbat_pos = 75
+set osd_rssi_pos = 2112
+set osd_link_quality_pos = 2144
+set osd_tim_1_pos = 2464
+set osd_tim_2_pos = 2432
+set osd_flymode_pos = 2478
+set osd_mah_drawn_pos = 2189
+set osd_altitude_pos = 18521
+set osd_warnings_pos = 14666
+set osd_avg_cell_voltage_pos = 2157
+set osd_disarmed_pos = 2347
+set osd_flip_arrow_pos = 2255
+set osd_displayport_device = MSP
+set debug_mode = GYRO_SCALED
+set displayport_msp_serial = 3
+set gyro_1_sensor_align = CW270FLIP
+set gyro_1_align_pitch = 1800
+set gyro_1_align_yaw = 2700
+set name = Tiny Llama
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 127
+set dterm_lpf1_dyn_max_hz = 255
+set dterm_lpf1_static_hz = 127
+set dterm_lpf2_static_hz = 255
+set p_pitch = 28
+set i_pitch = 50
+set d_pitch = 24
+set f_pitch = 89
+set p_roll = 26
+set i_roll = 47
+set d_roll = 21
+set f_roll = 86
+set p_yaw = 26
+set i_yaw = 47
+set f_yaw = 86
+set angle_level_strength = 100
+set horizon_level_strength = 100
+set d_min_roll = 21
+set d_min_pitch = 24
+set feedforward_averaging = 2_POINT
+set dyn_idle_min_rpm = 60
+set simplified_master_multiplier = 60
+set simplified_d_gain = 120
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 120
+set simplified_dterm_filter_multiplier = 170
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set thr_expo = 20
+set roll_srate = 20
+set pitch_srate = 20
+set yaw_srate = 20
+
+rateprofile 1
+
+# rateprofile 1
+set thr_mid = 0
+set roll_rc_rate = 10
+set pitch_rc_rate = 10
+set yaw_rc_rate = 10
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 40
+set roll_srate = 90
+set pitch_srate = 90
+set yaw_srate = 80
+
+rateprofile 2
+
+# rateprofile 2
+set thr_mid = 0
+set roll_rc_rate = 11
+set pitch_rc_rate = 11
+set yaw_rc_rate = 11
+set roll_expo = 38
+set pitch_expo = 38
+set yaw_expo = 38
+set roll_srate = 74
+set pitch_srate = 74
+set yaw_srate = 60
+
+rateprofile 3
+
+# rateprofile 3
+set thr_expo = 20
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 223
+set pitch_rc_rate = 223
+set yaw_rc_rate = 210
+set roll_expo = 55
+set pitch_expo = 55
+set yaw_expo = 60
+set roll_srate = 8
+set pitch_srate = 8
+set yaw_srate = 26
+
+rateprofile 4
+
+# rateprofile 4
+set thr_expo = 20
+
+rateprofile 5
+
+# rateprofile 5
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 195
+set pitch_rc_rate = 195
+set yaw_rc_rate = 180
+set roll_srate = 56
+set pitch_srate = 56
+set yaw_srate = 40
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
