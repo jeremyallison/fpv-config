@@ -3,7 +3,7 @@
 # diff all
 
 # version
-# Betaflight / STM32F7X2 (S7X2) 4.4.0 Jan 30 2023 / 22:11:34 (4605309d8) MSP API: 1.45
+# Betaflight / STM32F7X2 (S7X2) 4.4.0 Jan 31 2023 / 12:31:16 (4605309d8) MSP API: 1.45
 
 # config: YES
 
@@ -53,7 +53,7 @@ aux 5 36 6 1800 2100 0 0
 adjrange 0 0 0 900 2100 12 0 0 0
 
 # rxfail
-rxfail 3 s 1275
+rxfail 3 s 1325
 rxfail 6 s 1000
 
 # master
@@ -63,7 +63,7 @@ set dyn_notch_max_hz = 800
 set gyro_lpf1_dyn_min_hz = 120
 set gyro_lpf1_dyn_max_hz = 350
 set acc_lpf_hz = 10
-set acc_calibration = -25,-24,13,1
+set acc_calibration = -5,-17,13,1
 set rc_smoothing_auto_factor = 50
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT600
@@ -75,6 +75,7 @@ set gps_ublox_use_galileo = ON
 set gps_rescue_ground_speed = 2000
 set gps_rescue_pitch_angle_max = 60
 set gps_rescue_throttle_max = 1800
+set gps_rescue_throttle_hover = 1315
 set gps_rescue_sanity_checks = RESCUE_SANITY_ON
 set gps_rescue_allow_arming_without_fix = ON
 set simplified_gyro_filter = OFF
@@ -83,21 +84,23 @@ set osd_rssi_pos = 2144
 set osd_link_quality_pos = 2176
 set osd_tim_1_pos = 2560
 set osd_tim_2_pos = 2528
-set osd_flymode_pos = 2585
+set osd_flymode_pos = 2588
 set osd_current_pos = 144
-set osd_mah_drawn_pos = 3211
-set osd_gps_speed_pos = 2175
+set osd_mah_drawn_pos = 3221
+set osd_gps_speed_pos = 3200
 set osd_gps_sats_pos = 2161
-set osd_home_dir_pos = 2234
+set osd_home_dir_pos = 2238
 set osd_home_dist_pos = 2200
-set osd_altitude_pos = 18520
-set osd_warnings_pos = 14677
-set osd_avg_cell_voltage_pos = 3179
-set osd_disarmed_pos = 2551
-set osd_flip_arrow_pos = 2266
+set osd_altitude_pos = 18514
+set osd_warnings_pos = 14682
+set osd_avg_cell_voltage_pos = 2142
+set osd_disarmed_pos = 2554
+set osd_flip_arrow_pos = 2270
 set osd_stat_bitmask = 2229368
 set osd_gps_sats_show_hdop = ON
 set osd_displayport_device = MSP
+set osd_canvas_width = 60
+set osd_canvas_height = 22
 set debug_mode = GYRO_SCALED
 set vcd_video_system = HD
 set gyro_1_align_yaw = 2700
@@ -113,7 +116,6 @@ set dterm_lpf1_dyn_max_hz = 0
 set dterm_lpf1_dyn_expo = 0
 set dterm_lpf1_static_hz = 80
 set dterm_lpf2_static_hz = 140
-set anti_gravity_gain = 40
 set p_pitch = 98
 set i_pitch = 131
 set d_pitch = 82
@@ -125,6 +127,7 @@ set f_roll = 178
 set p_yaw = 85
 set i_yaw = 113
 set f_yaw = 178
+set angle_level_strength = 100
 set d_min_roll = 69
 set d_min_pitch = 82
 set feedforward_averaging = 2_POINT
