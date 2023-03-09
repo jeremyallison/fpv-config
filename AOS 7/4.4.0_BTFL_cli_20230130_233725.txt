@@ -58,7 +58,7 @@ rxfail 6 s 1000
 
 # master
 set gyro_lpf2_static_hz = 0
-set dyn_notch_count = 2
+set dyn_notch_count = 1
 set dyn_notch_max_hz = 800
 set gyro_lpf1_dyn_min_hz = 120
 set gyro_lpf1_dyn_max_hz = 350
@@ -67,8 +67,9 @@ set acc_calibration = -5,-17,13,1
 set rc_smoothing_auto_factor = 50
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT600
+set failsafe_delay = 5
 set failsafe_procedure = GPS-RESCUE
-set ibata_scale = 112
+set ibata_scale = 64
 set beeper_dshot_beacon_tone = 3
 set small_angle = 180
 set gps_ublox_use_galileo = ON
@@ -78,6 +79,7 @@ set gps_rescue_throttle_max = 1800
 set gps_rescue_throttle_hover = 1315
 set gps_rescue_sanity_checks = RESCUE_SANITY_ON
 set gps_rescue_allow_arming_without_fix = ON
+set deadband = 2
 set simplified_gyro_filter = OFF
 set osd_vbat_pos = 75
 set osd_rssi_pos = 2144
@@ -85,7 +87,7 @@ set osd_link_quality_pos = 2176
 set osd_tim_1_pos = 2560
 set osd_tim_2_pos = 2528
 set osd_flymode_pos = 2588
-set osd_current_pos = 144
+set osd_current_pos = 3188
 set osd_mah_drawn_pos = 3221
 set osd_gps_speed_pos = 3200
 set osd_gps_sats_pos = 2161
@@ -119,14 +121,14 @@ set dterm_lpf2_static_hz = 140
 set p_pitch = 98
 set i_pitch = 131
 set d_pitch = 82
-set f_pitch = 204
+set f_pitch = 226
 set p_roll = 85
 set i_roll = 113
 set d_roll = 69
-set f_roll = 178
+set f_roll = 198
 set p_yaw = 85
 set i_yaw = 113
-set f_yaw = 178
+set f_yaw = 198
 set angle_level_strength = 100
 set d_min_roll = 69
 set d_min_pitch = 82
@@ -138,7 +140,6 @@ set simplified_i_gain = 75
 set simplified_d_gain = 140
 set simplified_pi_gain = 115
 set simplified_dmax_gain = 0
-set simplified_feedforward_gain = 90
 set simplified_pitch_d_gain = 105
 set simplified_pitch_pi_gain = 110
 set simplified_dterm_filter = OFF
@@ -196,7 +197,7 @@ set yaw_srate = 80
 rateprofile 3
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 2
 
 # save configuration
 save
